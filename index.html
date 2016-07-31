@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>jQuery Forms</title>
+      <script type="text/javascript" src="../vendor/jquery-3.0.0.min.js"></script>
+      <script type="text/javascript" src="forms.js"></script>
+      <link rel="stylesheet" href="form-style.css" />
+  </head>
+  <body>
+    <h1>jQuery Forms</h1>
+    <div>
+      <form id="employeeinfo">
+        <label for="employeefirstname">Employee First Name:</label>
+        <input type="text" id="employeefirstname" name="employeefirstname"/>
+
+        <label for="employeelastname">Employee Last Name:</label>
+        <input type="text" id="employeelastname" name="employeelastname"/>
+
+        <label for="employeeidnum">Employee ID Number:</label>
+        <input type="number" id="employeeidnum" name="employeeidnum"/>
+
+        <label for="employeejobtitle">Employee Job Title:</label>
+        <input type="text" id="employeejobtitle" name="employeejobtitle"/>
+
+        <label for="employeesalaryyearly">Employee Salary (Yearly):</label>
+        <input type="number" id="employeesalaryyearly" name="employeesalaryyearly"/>
+
+        <input type="submit" value="Submit Employee"/>
+      </form>
+    </div>
+    <div id="container">
+      <h2>Workers</h2>
+    </div>
+    <div id="monthlySalary">
+      <h2></h2>
+    </div>
+  </body>
+</html>
