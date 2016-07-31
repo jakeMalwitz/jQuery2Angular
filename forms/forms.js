@@ -44,6 +44,6 @@ $(document).ready(function() {
     }
 
     function calculateTotal(totalA) {
-      $('#monthlySalary').children().text("Total Monthly Salary: " + (totalA/12));
+      $('#monthlySalary').children().text("Total Monthly Salary: " + (totalA/12).toFixed(2));
     }
 });
