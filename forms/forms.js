@@ -30,6 +30,9 @@ $(document).ready(function() {
       var $el = $('#container').children().last();
       $el.append('<p>' + empInfo.employeefirstname + ' ' + empInfo.employeelastname + ' ' + empInfo.employeeidnum + ' ' + empInfo.employeejobtitle + ' ' + empInfo.employeesalaryyearly + '<button>Remove Worker</button>' + '</p>');
       var theValue = parseInt(($.data($('p').get(0),'EmployeeSalary', empInfo.employeesalaryyearly)));
+      if(isNaN(theValue)){
+        theValue = 0;
+      }
       total += theValue;
       calculateTotal(total);
       $el.on('click', function(){
