@@ -1,3 +1,6 @@
+body {
+
+}
 h1 {
   color: teal;
 }
@@ -15,8 +18,4 @@ h1 {
 
 .clicked {
   border-color: red;
-}
-
-.DeleteButton {
-  
 }

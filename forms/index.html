@@ -2,37 +2,41 @@
 <html>
   <head>
       <title>jQuery Forms</title>
-      <script type="text/javascript" src="../vendor/jquery-3.0.0.min.js"></script>
+      <script type="text/javascript" src="vendor/angular.min.js"></script>
       <script type="text/javascript" src="forms.js"></script>
       <link rel="stylesheet" href="form-style.css" />
   </head>
-  <body>
-    <h1>jQuery Forms</h1>
-    <div>
+  <body ng-app="myApp">
+    <h1>Angular Forms</h1>
+    <div ng-controller="taskController">
       <form id="employeeinfo">
-        <label for="employeefirstname">Employee First Name:</label>
-        <input type="text" id="employeefirstname" name="employeefirstname"/>
+        <label for="emfirstName">Employee First Name:</label>
+        <input ng-model="employee.emfirstName" type="text" id="emfirstName" name="emfirstName"/>
 
-        <label for="employeelastname">Employee Last Name:</label>
-        <input type="text" id="employeelastname" name="employeelastname"/>
+        <label for="emlastName">Employee Last Name:</label>
+        <input ng-model="employee.emlastName" type="text" id="emlastName" name="emlastName"/>
 
-        <label for="employeeidnum">Employee ID Number:</label>
-        <input type="number" id="employeeidnum" name="employeeidnum"/>
+        <label for="emID">Employee ID Number:</label>
+        <input ng-model="employee.emID" type="text" id="emID" name="emID"/>
 
-        <label for="employeejobtitle">Employee Job Title:</label>
-        <input type="text" id="employeejobtitle" name="employeejobtitle"/>
+        <label for="emJT">Employee Job Title:</label>
+        <input ng-model="employee.emJT" type="text" id="emJT" name="emJT"/>
 
-        <label for="employeesalaryyearly">Employee Salary (Yearly):</label>
-        <input type="number" id="employeesalaryyearly" name="employeesalaryyearly"/>
+        <label for="emYS">Employee Salary (Yearly):</label>
+        <input ng-model="employee.emYS" type="number" id="emYS" name="emYS"/>
 
-        <input type="submit" value="Submit Employee"/>
+        <input id="emSubmit" ng-click="getEmployee()" type="submit"/>
       </form>
-    </div>
+
     <div id="container">
-      <h2>Workers</h2>
+      <div class="employeeListing" ng-repeat="employee in emContent">
+      <h2>{{ employee }}</h2>
+      <button ng-click="delete(employee.emID)" class="delete">Remove Worker</button>
     </div>
+
     <div id="monthlySalary">
-      <h2></h2>
+      <h2>Monthly Total: {{ (total /12).toFixed(2) }}</h2>
+    </div>
     </div>
   </body>
 </html>

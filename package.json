@@ -1,0 +1,23 @@
+{
+  "name": "weekendchallenge1redo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "^1.5.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakeMalwitz/Weekend_Challenge_1.git"
+  },
+  "author": "Jake Malwitz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jakeMalwitz/Weekend_Challenge_1/issues"
+  },
+  "homepage": "https://github.com/jakeMalwitz/Weekend_Challenge_1#readme"
+}
