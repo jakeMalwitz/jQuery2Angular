@@ -20,7 +20,7 @@
         <input ng-model="employee.emID" type="text" id="emID" name="emID"/>
 
         <label for="emJT">Employee Job Title:</label>
-        <input ng-model="employee.emJT" type="text" id="emJT" name="emJT"/>
+        <input ng-model= "employee.emJT" type="text" id="emJT" name="emJT"/>
 
         <label for="emYS">Employee Salary (Yearly):</label>
         <input ng-model="employee.emYS" type="number" id="emYS" name="emYS"/>
@@ -30,7 +30,7 @@
 
     <div id="container">
       <div class="employeeListing" ng-repeat="employee in emContent">
-      <h2>{{ employee }}</h2>
+      <h2>{{ employee.emfirstName + " " + employee.emlastName + " " + employee.emID + " " + employee.emJT + " " + employee.emYS }} </h2>
       <button ng-click="delete(employee.emID)" class="delete">Remove Worker</button>
     </div>
 

@@ -7,11 +7,12 @@ myApp.controller("taskController", ["$scope", function($scope){
   $scope.employee = {};
 
   $scope.getEmployee = function(){
-    console.log($scope.employee.emID);
+
     if($scope.employee.emID !== undefined && $scope.employee.emYS !== NaN){
     $scope.emContent.push($scope.employee);
     $scope.total += $scope.employee.emYS;
     $scope.employee = {};
+
 } else {
   alert("Please enter blank fields");
 }
